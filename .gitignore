@@ -1,0 +1,6 @@
+data/
+data-demo/
+node_modules/
+*.tmp
+.netlify
+.beta-key

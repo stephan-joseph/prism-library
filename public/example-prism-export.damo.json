@@ -1,0 +1,510 @@
+{
+ "app": "damo-estimation-workflow",
+ "format": 1,
+ "savedAt": "2026-09-30T00:00:00Z",
+ "state": {
+  "deal": "Acme Retail",
+  "active": 1,
+  "days": 5,
+  "hours": 24,
+  "spd": 3,
+  "fteHours": 40,
+  "util1": 85,
+  "shiftMode": [
+   "active",
+   "active",
+   "oncall"
+  ],
+  "weekendMode": "active",
+  "oncall1": 15,
+  "ocMode": "flat",
+  "p1PerMonth": null,
+  "p1Hours": 3,
+  "standby": 10,
+  "perShift": {
+   "L2": 1,
+   "L3": 1
+  },
+  "locations": [
+   {
+    "id": "in",
+    "name": "India",
+    "kind": "Offshore",
+    "leave": 18,
+    "hol": 10
+   },
+   {
+    "id": "ro",
+    "name": "Romania",
+    "kind": "Nearshore EU",
+    "leave": 21,
+    "hol": 15
+   }
+  ],
+  "assign": [
+   "in",
+   "in",
+   "ro"
+  ],
+  "backfill": true,
+  "rounding": "cell",
+  "towers": [
+   {
+    "id": "k54bb9y",
+    "kind": "AMS",
+    "name": "",
+    "vol": true,
+    "inc": 400,
+    "sr": null,
+    "estate": "modern",
+    "cpx": null,
+    "apps": {
+     "S": null,
+     "M": null,
+     "L": null,
+     "XL": null,
+     "XXL": null
+    },
+    "mau": null,
+    "mauRate": null,
+    "env": null,
+    "host": null,
+    "db": null,
+    "sec": false,
+    "dp": null,
+    "pipe": null,
+    "integ": null,
+    "up": null,
+    "down": null,
+    "agents": null,
+    "models": null,
+    "tools": null,
+    "ksrc": null,
+    "hiRisk": false,
+    "aiops": true,
+    "sre": null,
+    "levels": null,
+    "tktLevel": null,
+    "enh": null,
+    "own": {
+     "L1": "customer",
+     "L2": "us",
+     "L3": "us"
+    },
+    "mix": null,
+    "sla": {
+     "P1r": 30,
+     "P1x": 120,
+     "P2r": 30,
+     "P2x": 240
+    },
+    "avail": 99,
+    "slaTier": "silver",
+    "skills": [
+     {
+      "id": "5039xu8",
+      "skill": "sse",
+      "name": "Systems Support Engineer (L2/L3)",
+      "share": 70,
+      "absorb": true
+     },
+     {
+      "id": "ca91g4e",
+      "skill": "fe",
+      "name": "Front end dev",
+      "share": 30,
+      "absorb": true
+     }
+    ]
+   },
+   {
+    "id": "iu8nlav",
+    "kind": "IMS",
+    "name": "",
+    "vol": false,
+    "inc": null,
+    "sr": null,
+    "estate": "legacy",
+    "cpx": true,
+    "apps": {
+     "S": null,
+     "M": null,
+     "L": null,
+     "XL": null,
+     "XXL": null
+    },
+    "mau": null,
+    "mauRate": null,
+    "env": 4,
+    "host": 2,
+    "db": 3,
+    "sec": true,
+    "dp": null,
+    "pipe": null,
+    "integ": null,
+    "up": null,
+    "down": null,
+    "agents": null,
+    "models": null,
+    "tools": null,
+    "ksrc": null,
+    "hiRisk": false,
+    "aiops": false,
+    "sre": true,
+    "sreFte": 0.75,
+    "levels": null,
+    "tktLevel": null,
+    "enh": null,
+    "own": {
+     "L1": "customer",
+     "L2": "us",
+     "L3": "us"
+    },
+    "mix": null,
+    "sla": {
+     "P1r": null,
+     "P1x": null,
+     "P2r": null,
+     "P2x": null
+    },
+    "avail": null,
+    "slaTier": "",
+    "skills": [
+     {
+      "id": "rn4f7st",
+      "skill": "infra",
+      "name": "Infra support engineer",
+      "share": 100,
+      "absorb": true
+     }
+    ]
+   }
+  ],
+  "bench": {
+   "p12": 70,
+   "p23": 20,
+   "are1": 0.25,
+   "are2": 3,
+   "are3": 10,
+   "util": 85,
+   "hrsMonth": 160,
+   "bModern": 25,
+   "bLegacy": 35,
+   "handoff": 4,
+   "sla": {
+    "resp15": 25,
+    "resp30": 12,
+    "restore2h": 10,
+    "avail999": 10,
+    "cap": 40
+   },
+   "routing": {
+    "P1": [
+     0,
+     40,
+     60
+    ],
+    "P2": [
+     10,
+     60,
+     30
+    ],
+    "P3": [
+     55,
+     40,
+     5
+    ],
+    "P4": [
+     85,
+     15,
+     0
+    ]
+   },
+   "tpa": {
+    "S": 4,
+    "M": 10,
+    "L": 17.5,
+    "XL": 30,
+    "XXL": 50
+   },
+   "ims": {
+    "wEnv": 1,
+    "wHost": 1.5,
+    "wDb": 1,
+    "sec": 3,
+    "tpp": 4.5
+   },
+   "dms": {
+    "wDp": 1,
+    "wPipe": 0.5,
+    "wInt": 1,
+    "wUp": 0.75,
+    "wDown": 0.75,
+    "tpp": 3.4
+   },
+   "ai": {
+    "wAgent": 2,
+    "wModel": 1.5,
+    "wTool": 0.5,
+    "wKs": 0.75,
+    "risk": 4,
+    "tpp": 3.5
+   }
+  },
+  "sparePct": 25,
+  "onCallPct": 15,
+  "aiMaturity": "low",
+  "transPct": null,
+  "aiRatio": "auto",
+  "sdmRatio": 12,
+  "sdmLoc": null,
+  "cplx": "medium",
+  "pyr": {},
+  "contPct": null,
+  "term": 3,
+  "savePct": null,
+  "cont2": null,
+  "protectFloor": true,
+  "ex": {},
+  "exSource": "",
+  "exTol": 10,
+  "cov": {},
+  "conf": {},
+  "trans": {
+   "kt": null,
+   "par": null,
+   "ktPct": 50,
+   "mgr": 1
+  },
+  "prov": {},
+  "meta": {
+   "version": 1,
+   "status": "draft",
+   "preparedBy": "User guide example",
+   "approvedBy": "",
+   "approvedAt": "",
+   "approvedHash": ""
+  },
+  "assumptions": {
+   "s1": [
+    "Service desk (L1) is provided by the client and is out of scope for this team."
+   ],
+   "s2": [],
+   "s3": [],
+   "s4": [],
+   "s5": [],
+   "s6": [],
+   "s7": [],
+   "s8": []
+  },
+  "risks": {
+   "s1": [
+    {
+     "id": "psa1206",
+     "on": true,
+     "pct": 5,
+     "title": "Single point of failure on a shift",
+     "note": "With one person per tier on a shift, sickness or attrition leaves the shift uncovered. Mitigation: named cross-trained backup on call."
+    },
+    {
+     "id": "kavwoa9",
+     "on": true,
+     "pct": 3,
+     "title": "Handover loss between locations",
+     "note": "Context is lost at follow-the-sun handovers and resolution slows. Mitigation: handover runbook and a 30-minute overlap."
+    },
+    {
+     "id": "tfhsa9a",
+     "on": false,
+     "pct": 2,
+     "title": "Attrition and backfill lag",
+     "note": "Replacements take 6\u201310 weeks to hire and ramp. Mitigation: shadow resource in the offshore bench."
+    },
+    {
+     "id": "1xegwn0",
+     "on": true,
+     "pct": 0,
+     "title": "Coverage window grows after signature",
+     "note": "Client asks for weekend or extended hours later. Tracked only: priced as a change request in the SOW, no FTE added."
+    }
+   ],
+   "s2": [
+    {
+     "id": "fdvpd0y",
+     "on": false,
+     "pct": 10,
+     "title": "No volumetrics for some towers",
+     "note": "Demand comes from a complexity or MAU proxy, not ticket history. Mitigation: volume band clause in the SOW and a request for 3\u20136 months of tickets ([F] Sc.1)."
+    },
+    {
+     "id": "9hbeqnr",
+     "on": false,
+     "pct": 5,
+     "title": "Undiscovered integrations and dependencies",
+     "note": "Hidden interfaces raise L3 effort after takeover. Mitigation: portfolio analysis as a pre-proposal investment ([F] Sc.1 risk log)."
+    },
+    {
+     "id": "mjf3l3f",
+     "on": false,
+     "pct": 5,
+     "title": "Niche skill availability",
+     "note": "Special or legacy skills are hard to hire in the chosen locations. Mitigation: named bench or partner capacity."
+    },
+    {
+     "id": "6ova1m1",
+     "on": false,
+     "pct": 0,
+     "title": "Work team below the coverage floor",
+     "note": "If the work needs fewer people than the shifts, the team is lifted to the base team and has spare time. Tracked only: use it for transformation or enhancements."
+    }
+   ],
+   "s3": [
+    {
+     "id": "c8iq38w",
+     "on": false,
+     "pct": 5,
+     "title": "Skills needed live outside the chosen shifts",
+     "note": "P1 incidents out of hours may need the specialist hands-on, not just reachable. Mitigation: on-call response SLA and escalation path in the SOW."
+    },
+    {
+     "id": "xc9zzw0",
+     "on": false,
+     "pct": 0,
+     "title": "On-call rota too thin",
+     "note": "One specialist cannot carry a sustainable on-call rota. Tracked only: at least two people share each on-call rota."
+    },
+    {
+     "id": "uuanmku",
+     "on": false,
+     "pct": 3,
+     "title": "Shift pattern changes after transition",
+     "note": "The client moves core hours or adds a region, so live shifts move. Mitigation: shift changes handled as a change request."
+    }
+   ],
+   "s4": [
+    {
+     "id": "q2cwqjf",
+     "on": false,
+     "pct": 5,
+     "title": "AI tool integration complexity",
+     "note": "Client tooling needs more work to integrate than planned. Mitigation: 2-week technical spike during transition ([F] Sc.2 risk log)."
+    },
+    {
+     "id": "jeugay7",
+     "on": false,
+     "pct": 0,
+     "title": "AI roadmap slippage",
+     "note": "Use cases land later than planned. Tracked only: PoC-gated commitments and no AI savings committed in Y1 ([F] Sc.1 risk log)."
+    },
+    {
+     "id": "s1zn4en",
+     "on": false,
+     "pct": 3,
+     "title": "Incumbent AI lock-in",
+     "note": "Proprietary incumbent tooling can't be reused. Mitigation: tooling portability requirements in the SOW assumptions ([F] Sc.2 risk log)."
+    }
+   ],
+   "s5": [
+    {
+     "id": "h1b7xpe",
+     "on": false,
+     "pct": 25,
+     "title": "Heavy governance cadence",
+     "note": "Weekly exec reviews, monthly performance reviews, QBRs and CAB across several client stakeholder groups ([F] Sc.3 Step 4). Mitigation: agree the cadence in the SOW."
+    },
+    {
+     "id": "eg3neyw",
+     "on": false,
+     "pct": 0,
+     "title": "Single SDM is a key-person dependency",
+     "note": "Tracked only: a named deputy from the delivery leads covers leave and escalation."
+    }
+   ],
+   "s6": [
+    {
+     "id": "k3r4g05",
+     "on": false,
+     "pct": 0,
+     "title": "Senior talent availability",
+     "note": "A senior-heavy pyramid needs more Leads and Seniors than the chosen locations may supply in time. Tracked only: confirm bench before signing."
+    },
+    {
+     "id": "3l5t6rd",
+     "on": false,
+     "pct": 0,
+     "title": "Client pushback on grade mix",
+     "note": "The client's rate card caps senior grades. Tracked only: agree the pyramid in the commercial assumptions."
+    }
+   ],
+   "s7": [
+    {
+     "id": "12tj9ah",
+     "on": false,
+     "pct": 5,
+     "title": "Volume growth beyond the baseline",
+     "note": "Ticket volume grows and eats the savings. Mitigation: volume band clause with a re-baseline trigger ([F] Sc.3 risk log)."
+    },
+    {
+     "id": "jyv2apx",
+     "on": false,
+     "pct": 0,
+     "title": "Savings depend on client access and tooling",
+     "note": "Tracked only: productivity gains are contingent on AI maturity assessment and client system access approval ([F] Sc.1)."
+    }
+   ],
+   "s8": [
+    {
+     "id": "j1y7a6q",
+     "on": false,
+     "pct": 0,
+     "title": "Existing team includes out-of-scope work",
+     "note": "Today's team may also do L1, projects or enhancements that are not in our scope. Check role by role before comparing."
+    },
+    {
+     "id": "pksghtp",
+     "on": false,
+     "pct": 0,
+     "title": "Hidden capacity in the existing team",
+     "note": "Client staff or shared incumbent teams quietly absorb L2/L3 work, so today's headcount understates the real effort ([F] Annexure 2: hidden work content)."
+    },
+    {
+     "id": "u3ycmi6",
+     "on": false,
+     "pct": 0,
+     "title": "Existing team is over-staffed",
+     "note": "A large incumbent team reflects low automation, not the work. Use Stage 7 savings to show the path down."
+    }
+   ]
+  }
+ },
+ "scenarios": [],
+ "library": {
+  "v": 1,
+  "towers": [
+   "AMS",
+   "IMS"
+  ],
+  "apps": 0,
+  "tickets": 459,
+  "coverage": "24x5",
+  "term": 3,
+  "team": {
+   "System Support Engineer": 18.77,
+   "Infra Support Engineer": 1.65,
+   "AIOps Engineer": 4.71,
+   "Service Reliability Engineer": 0.91,
+   "Solution Architect": 0.1,
+   "Service Delivery Manager": 2.01
+  },
+  "years": [
+   28.15,
+   24.89,
+   22.41
+  ],
+  "confidence": 51,
+  "aiops": [],
+  "assumptions": [
+   "Service desk (L1) is provided by the client and is out of scope for this team."
+  ]
+ }
+}

@@ -1,0 +1,1549 @@
+{
+ "version": 1,
+ "seq": 118,
+ "catalogue": [
+  {
+   "t": "Customer provides L1 in a second region",
+   "tw": "AMS"
+  },
+  {
+   "t": "Ticket volume stays within ±10% of baseline",
+   "tw": "All"
+  },
+  {
+   "t": "Knowledge transfer completes within 8 weeks",
+   "tw": "All"
+  },
+  {
+   "t": "No new applications added without a change request",
+   "tw": "AMS"
+  },
+  {
+   "t": "Customer provides monitoring tooling before go-live",
+   "tw": "IMS"
+  },
+  {
+   "t": "Patch and maintenance windows agreed monthly",
+   "tw": "IMS"
+  },
+  {
+   "t": "AIOps use cases go live in the planned month",
+   "tw": "AI"
+  },
+  {
+   "t": "Customer SMEs answer L3 escalations within SLA",
+   "tw": "All"
+  },
+  {
+   "t": "Source data quality meets the agreed threshold",
+   "tw": "DMS"
+  }
+ ],
+ "denylist": [],
+ "deals": [
+  {
+   "id": "L-0101",
+   "name": "Regional retailer, applications and infrastructure",
+   "ind": "Retail",
+   "tw": [
+    "AMS",
+    "IMS"
+   ],
+   "apps": 60,
+   "tix": 2400,
+   "cov": "24x7",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 9,
+    "Product Support Engineer": 6,
+    "Infra Support Engineer": 5,
+    "Service Delivery Manager": 2,
+    "Developer": 3,
+    "Service Reliability Engineer": 1,
+    "Quality Analyst": 1
+   },
+   "years": [
+    27,
+    24.84,
+    22.95
+   ],
+   "conf": 78,
+   "q": "proven",
+   "acc": 4,
+   "asm": [
+    {
+     "t": "Customer provides L1 in a second region",
+     "tw": "AMS",
+     "s": "held"
+    },
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "risk"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "No new applications added without a change request",
+     "tw": "AMS",
+     "s": "broken"
+    },
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "held"
+    },
+    {
+     "t": "Patch and maintenance windows agreed monthly",
+     "tw": "IMS",
+     "s": "held"
+    },
+    {
+     "t": "Customer SMEs answer L3 escalations within SLA",
+     "tw": "All",
+     "s": "held"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 20,
+     "act": 17
+    },
+    {
+     "uc": "Knowledge-base answers",
+     "from": 1,
+     "plan": 12,
+     "act": 13
+    },
+    {
+     "uc": "Alert noise reduction",
+     "from": 2,
+     "plan": 18,
+     "act": 11
+    },
+    {
+     "uc": "Self-service chatbot",
+     "from": 2,
+     "plan": 10,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per tower with a ±10% volume band",
+   "les": "Application count grew 14% in year 1 through informal requests. Change control was applied late.",
+   "by": "Sample data",
+   "date": "2025-03",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2025-03-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0102",
+   "name": "National insurer, applications support",
+   "ind": "Insurance",
+   "tw": [
+    "AMS"
+   ],
+   "apps": 90,
+   "tix": 3100,
+   "cov": "16x5",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Extended",
+   "team": {
+    "System Support Engineer": 12,
+    "Product Support Engineer": 7,
+    "Service Delivery Manager": 2,
+    "Developer": 4,
+    "Quality Analyst": 2
+   },
+   "years": [
+    27,
+    25.38,
+    24.3
+   ],
+   "conf": 74,
+   "q": "proven",
+   "acc": -3,
+   "asm": [
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "No new applications added without a change request",
+     "tw": "AMS",
+     "s": "held"
+    },
+    {
+     "t": "Customer SMEs answer L3 escalations within SLA",
+     "tw": "All",
+     "s": "risk"
+    },
+    {
+     "t": "Customer provides L1 in a second region",
+     "tw": "AMS",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 18,
+     "act": 19
+    },
+    {
+     "uc": "Knowledge-base answers",
+     "from": 2,
+     "plan": 12,
+     "act": 12
+    }
+   ],
+   "com": "Fixed fee with annual indexation",
+   "les": "Scope stayed stable. L3 developer capacity was right-sized after month 6.",
+   "by": "Sample data",
+   "date": "2025-01",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2025-01-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0103",
+   "name": "Retail bank, applications, data and AI platform",
+   "ind": "Banking",
+   "tw": [
+    "AMS",
+    "DMS",
+    "AI"
+   ],
+   "apps": 70,
+   "tix": 3600,
+   "cov": "24x7",
+   "reg": "APAC",
+   "term": 4,
+   "sla": "Premium",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 9,
+    "Product Support Engineer": 5,
+    "Data Ops Engineer": 7,
+    "AIOps Engineer": 3,
+    "AI/ML Engineer": 2,
+    "Service Delivery Manager": 2,
+    "Developer": 3,
+    "Service Reliability Engineer": 1,
+    "Quality Analyst": 1
+   },
+   "years": [
+    33,
+    30.69,
+    28.38
+   ],
+   "conf": 71,
+   "q": "proven",
+   "acc": 9,
+   "asm": [
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "broken"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "risk"
+    },
+    {
+     "t": "AIOps use cases go live in the planned month",
+     "tw": "AI",
+     "s": "broken"
+    },
+    {
+     "t": "Source data quality meets the agreed threshold",
+     "tw": "DMS",
+     "s": "broken"
+    },
+    {
+     "t": "Customer SMEs answer L3 escalations within SLA",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "No new applications added without a change request",
+     "tw": "AMS",
+     "s": "held"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 25,
+     "act": 18
+    },
+    {
+     "uc": "Predictive monitoring",
+     "from": 2,
+     "plan": 15,
+     "act": 6
+    },
+    {
+     "uc": "Auto-remediation runbooks",
+     "from": 2,
+     "plan": 20,
+     "act": 9
+    },
+    {
+     "uc": "Log and RCA summarisation",
+     "from": 1,
+     "plan": 12,
+     "act": 10
+    }
+   ],
+   "com": "Time and materials for build, fixed fee for run",
+   "les": "Data quality problems in two source systems added about 3 FTE of Data Ops effort in year 1. AIOps use cases started 3 months late.",
+   "by": "Sample data",
+   "date": "2025-05",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2025-05-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0104",
+   "name": "Global manufacturer, infrastructure operations",
+   "ind": "Manufacturing",
+   "tw": [
+    "IMS"
+   ],
+   "apps": 140,
+   "tix": 1800,
+   "cov": "24x7",
+   "reg": "NA",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Won",
+   "team": {
+    "Infra Support Engineer": 14,
+    "Product Support Engineer": 6,
+    "Service Reliability Engineer": 2,
+    "Service Delivery Manager": 2,
+    "Quality Analyst": 1
+   },
+   "years": [
+    25,
+    24,
+    23
+   ],
+   "conf": 76,
+   "q": "proven",
+   "acc": -2,
+   "asm": [
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "held"
+    },
+    {
+     "t": "Patch and maintenance windows agreed monthly",
+     "tw": "IMS",
+     "s": "held"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "Customer SMEs answer L3 escalations within SLA",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "held"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Alert noise reduction",
+     "from": 1,
+     "plan": 22,
+     "act": 24
+    },
+    {
+     "uc": "Predictive monitoring",
+     "from": 2,
+     "plan": 12,
+     "act": 10
+    }
+   ],
+   "com": "Fixed fee per device band",
+   "les": "Monitoring tooling was ready on day one, which kept the run team stable.",
+   "by": "Sample data",
+   "date": "2025-02",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2025-02-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0105",
+   "name": "Telecom operator, applications and data",
+   "ind": "Telecom",
+   "tw": [
+    "AMS",
+    "DMS"
+   ],
+   "apps": 120,
+   "tix": 5200,
+   "cov": "24x7",
+   "reg": "IME",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 16,
+    "Product Support Engineer": 12,
+    "Data Ops Engineer": 6,
+    "Service Delivery Manager": 3,
+    "Developer": 5,
+    "Service Reliability Engineer": 2,
+    "Quality Analyst": 2
+   },
+   "years": [
+    46,
+    41.4,
+    38.64
+   ],
+   "conf": 69,
+   "q": "proven",
+   "acc": 6,
+   "asm": [
+    {
+     "t": "Customer provides L1 in a second region",
+     "tw": "AMS",
+     "s": "risk"
+    },
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "broken"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "held"
+    },
+    {
+     "t": "No new applications added without a change request",
+     "tw": "AMS",
+     "s": "risk"
+    },
+    {
+     "t": "Source data quality meets the agreed threshold",
+     "tw": "DMS",
+     "s": "held"
+    },
+    {
+     "t": "Customer SMEs answer L3 escalations within SLA",
+     "tw": "All",
+     "s": "risk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 22,
+     "act": 16
+    },
+    {
+     "uc": "Self-service chatbot",
+     "from": 2,
+     "plan": 14,
+     "act": 8
+    },
+    {
+     "uc": "Knowledge-base answers",
+     "from": 1,
+     "plan": 12,
+     "act": 10
+    }
+   ],
+   "com": "Fixed fee with outcome-based SLA credits",
+   "les": "Ticket volume ran 18% above baseline from month 4. A volume band would have triggered a price review.",
+   "by": "Sample data",
+   "date": "2025-06",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2025-06-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0106",
+   "name": "Health insurer, applications support",
+   "ind": "Healthcare",
+   "tw": [
+    "AMS"
+   ],
+   "apps": 45,
+   "tix": 1500,
+   "cov": "12x5",
+   "reg": "NA",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 6,
+    "Product Support Engineer": 3,
+    "Service Delivery Manager": 1,
+    "Developer": 2,
+    "Quality Analyst": 1
+   },
+   "years": [
+    13,
+    12.35,
+    11.7
+   ],
+   "conf": 80,
+   "q": "reviewed",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "No new applications added without a change request",
+     "tw": "AMS",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 15,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-02",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-02-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0107",
+   "name": "Utility company, infrastructure and applications",
+   "ind": "Energy",
+   "tw": [
+    "AMS",
+    "IMS"
+   ],
+   "apps": 80,
+   "tix": 2000,
+   "cov": "24x7",
+   "reg": "EU",
+   "term": 5,
+   "sla": "Standard",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 8,
+    "Product Support Engineer": 4,
+    "Infra Support Engineer": 7,
+    "Service Delivery Manager": 2,
+    "Service Reliability Engineer": 1,
+    "Developer": 2,
+    "Quality Analyst": 1
+   },
+   "years": [
+    25,
+    23.75,
+    22.5
+   ],
+   "conf": 73,
+   "q": "reviewed",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "unk"
+    },
+    {
+     "t": "Patch and maintenance windows agreed monthly",
+     "tw": "IMS",
+     "s": "unk"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Alert noise reduction",
+     "from": 1,
+     "plan": 20,
+     "act": null
+    },
+    {
+     "uc": "Knowledge-base answers",
+     "from": 2,
+     "plan": 10,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per tower, five-year term with indexation",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-01",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-01-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0108",
+   "name": "Pharma company, data operations and AI",
+   "ind": "Healthcare",
+   "tw": [
+    "DMS",
+    "AI"
+   ],
+   "apps": 35,
+   "tix": 900,
+   "cov": "16x5",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Open",
+   "team": {
+    "Data Ops Engineer": 8,
+    "AIOps Engineer": 3,
+    "AI/ML Engineer": 2,
+    "Service Delivery Manager": 1,
+    "Quality Analyst": 1,
+    "Business Analyst": 1
+   },
+   "years": [
+    16,
+    15.04,
+    14.4
+   ],
+   "conf": 66,
+   "q": "reviewed",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Source data quality meets the agreed threshold",
+     "tw": "DMS",
+     "s": "unk"
+    },
+    {
+     "t": "AIOps use cases go live in the planned month",
+     "tw": "AI",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Log and RCA summarisation",
+     "from": 1,
+     "plan": 14,
+     "act": null
+    },
+    {
+     "uc": "Predictive monitoring",
+     "from": 2,
+     "plan": 12,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee for run, time and materials for AI build",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-04",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-04-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0109",
+   "name": "Retail group, applications",
+   "ind": "Retail",
+   "tw": [
+    "AMS"
+   ],
+   "apps": 100,
+   "tix": 4200,
+   "cov": "24x7",
+   "reg": "APAC",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Lost",
+   "team": {
+    "System Support Engineer": 13,
+    "Product Support Engineer": 10,
+    "Service Delivery Manager": 2,
+    "Developer": 4,
+    "Service Reliability Engineer": 1,
+    "Quality Analyst": 2
+   },
+   "years": [
+    32,
+    29.76,
+    28.16
+   ],
+   "conf": 70,
+   "q": "reviewed",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Customer provides L1 in a second region",
+     "tw": "AMS",
+     "s": "unk"
+    },
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 20,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per tower",
+   "les": "Lost. The customer chose a model with a larger offshore L1 share.",
+   "by": "Sample data",
+   "date": "2025-11",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2025-11-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0110",
+   "name": "Insurer, applications and infrastructure",
+   "ind": "Insurance",
+   "tw": [
+    "AMS",
+    "IMS"
+   ],
+   "apps": 55,
+   "tix": 2000,
+   "cov": "24x7",
+   "reg": "NA",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 8,
+    "Product Support Engineer": 5,
+    "Infra Support Engineer": 5,
+    "Service Delivery Manager": 2,
+    "Developer": 2,
+    "Service Reliability Engineer": 1,
+    "Quality Analyst": 1
+   },
+   "years": [
+    24,
+    22.32,
+    20.88
+   ],
+   "conf": 75,
+   "q": "reviewed",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "unk"
+    },
+    {
+     "t": "Knowledge transfer completes within 8 weeks",
+     "tw": "All",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 20,
+     "act": null
+    },
+    {
+     "uc": "Knowledge-base answers",
+     "from": 1,
+     "plan": 12,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per tower with a ±10% volume band",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-05",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-05-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0111",
+   "name": "Bank, infrastructure with SRE",
+   "ind": "Banking",
+   "tw": [
+    "IMS"
+   ],
+   "apps": 110,
+   "tix": 1600,
+   "cov": "24x7",
+   "reg": "EU",
+   "term": 4,
+   "sla": "Premium",
+   "out": "Won",
+   "team": {
+    "Infra Support Engineer": 11,
+    "Service Reliability Engineer": 4,
+    "Product Support Engineer": 4,
+    "Service Delivery Manager": 2,
+    "Quality Analyst": 1
+   },
+   "years": [
+    22,
+    20.9,
+    19.8
+   ],
+   "conf": 72,
+   "q": "reviewed",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "unk"
+    },
+    {
+     "t": "Patch and maintenance windows agreed monthly",
+     "tw": "IMS",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Alert noise reduction",
+     "from": 1,
+     "plan": 24,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per device band with SRE uplift",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-03",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-03-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0112",
+   "name": "Logistics provider, applications and infrastructure",
+   "ind": "Logistics",
+   "tw": [
+    "AMS",
+    "IMS"
+   ],
+   "apps": 50,
+   "tix": 1900,
+   "cov": "16x5",
+   "reg": "IME",
+   "term": 2,
+   "sla": "Standard",
+   "out": "Open",
+   "team": {
+    "System Support Engineer": 6,
+    "Product Support Engineer": 4,
+    "Infra Support Engineer": 4,
+    "Service Delivery Manager": 1,
+    "Developer": 2
+   },
+   "years": [
+    17,
+    16.32,
+    15.64
+   ],
+   "conf": 61,
+   "q": "draft",
+   "acc": null,
+   "asm": [],
+   "aip": [],
+   "com": "Fixed fee",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-07",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-07-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0113",
+   "name": "Telecom operator, AI platform operations",
+   "ind": "Telecom",
+   "tw": [
+    "AI"
+   ],
+   "apps": 20,
+   "tix": 600,
+   "cov": "24x7",
+   "reg": "APAC",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Open",
+   "team": {
+    "AIOps Engineer": 5,
+    "AI/ML Engineer": 3,
+    "Service Delivery Manager": 1,
+    "Quality Analyst": 1
+   },
+   "years": [
+    10,
+    9,
+    8.5
+   ],
+   "conf": 58,
+   "q": "draft",
+   "acc": null,
+   "asm": [],
+   "aip": [
+    {
+     "uc": "Auto-remediation runbooks",
+     "from": 1,
+     "plan": 18,
+     "act": null
+    }
+   ],
+   "com": "Time and materials",
+   "les": "",
+   "by": "Sample data",
+   "date": "2026-08",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-08-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0114",
+   "name": "Retail group, applications and data",
+   "ind": "Retail",
+   "tw": [
+    "AMS",
+    "DMS"
+   ],
+   "apps": 75,
+   "tix": 2600,
+   "cov": "24x7",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Won",
+   "team": {
+    "System Support Engineer": 10,
+    "Product Support Engineer": 7,
+    "Data Ops Engineer": 5,
+    "Service Delivery Manager": 2,
+    "Developer": 3,
+    "Quality Analyst": 1
+   },
+   "years": [
+    28,
+    26.32,
+    25.2
+   ],
+   "conf": 64,
+   "q": "draft",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "unk"
+    }
+   ],
+   "aip": [],
+   "com": "Fixed fee",
+   "les": "",
+   "by": "Sample data",
+   "date": "2024-06",
+   "framework": 1,
+   "status": "published",
+   "sample": true,
+   "history": [
+    {
+     "at": "2024-06-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ]
+  },
+  {
+   "id": "L-0115",
+   "name": "Insurer, applications and infrastructure, two regions",
+   "ind": "Insurance",
+   "tw": [
+    "AMS",
+    "IMS"
+   ],
+   "apps": 65,
+   "tix": 2300,
+   "cov": "24x7",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Premium",
+   "out": "Open",
+   "team": {
+    "System Support Engineer": 9,
+    "Product Support Engineer": 6,
+    "Infra Support Engineer": 5,
+    "Service Delivery Manager": 2,
+    "Developer": 3,
+    "Service Reliability Engineer": 1,
+    "Quality Analyst": 1
+   },
+   "years": [
+    27,
+    25.11,
+    23.49
+   ],
+   "conf": 73,
+   "q": "draft",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Auto ticket triage and routing",
+     "from": 1,
+     "plan": 18,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per tower",
+   "les": "",
+   "by": "SA team, EU",
+   "date": "2026-09",
+   "framework": 1,
+   "status": "pending",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-09-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ],
+   "checks": [
+    {
+     "k": "Anonymisation",
+     "ok": false,
+     "t": "Assumption 3 names a site (\"the Rotterdam data centre\"). Replace with a generic description.",
+     "block": true
+    },
+    {
+     "k": "Completeness",
+     "ok": true,
+     "t": "All required fields filled.",
+     "block": false
+    },
+    {
+     "k": "Framework version",
+     "ok": true,
+     "t": "Built on the current framework (v2.1).",
+     "block": false
+    },
+    {
+     "k": "Duplicates",
+     "ok": false,
+     "t": "91% match with L-0110. Confirm this is a separate deal.",
+     "block": false
+    }
+   ]
+  },
+  {
+   "id": "L-0116",
+   "name": "Energy company, infrastructure",
+   "ind": "Energy",
+   "tw": [
+    "IMS"
+   ],
+   "apps": 95,
+   "tix": 1400,
+   "cov": "24x7",
+   "reg": "NA",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Open",
+   "team": {
+    "Infra Support Engineer": 10,
+    "Product Support Engineer": 4,
+    "Service Reliability Engineer": 1,
+    "Service Delivery Manager": 1,
+    "Quality Analyst": 1
+   },
+   "years": [
+    17,
+    16.15,
+    15.47
+   ],
+   "conf": 70,
+   "q": "draft",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Customer provides monitoring tooling before go-live",
+     "tw": "IMS",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Alert noise reduction",
+     "from": 1,
+     "plan": 20,
+     "act": null
+    }
+   ],
+   "com": "Fixed fee per device band",
+   "les": "",
+   "by": "SA team, North America",
+   "date": "2026-09",
+   "framework": 1,
+   "status": "pending",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-09-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ],
+   "checks": [
+    {
+     "k": "Anonymisation",
+     "ok": true,
+     "t": "No names or locations found.",
+     "block": false
+    },
+    {
+     "k": "Completeness",
+     "ok": true,
+     "t": "All required fields filled.",
+     "block": false
+    },
+    {
+     "k": "Framework version",
+     "ok": false,
+     "t": "Built on v1.8. Re-run in the current version before publishing.",
+     "block": false
+    },
+    {
+     "k": "Duplicates",
+     "ok": true,
+     "t": "No close match.",
+     "block": false
+    }
+   ]
+  },
+  {
+   "id": "L-0117",
+   "name": "Hospital group, applications and data",
+   "ind": "Healthcare",
+   "tw": [
+    "AMS",
+    "DMS"
+   ],
+   "apps": 55,
+   "tix": 1700,
+   "cov": "16x5",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Open",
+   "team": {
+    "System Support Engineer": 7,
+    "Product Support Engineer": 4,
+    "Data Ops Engineer": 4,
+    "Service Delivery Manager": 1,
+    "Developer": 2,
+    "Quality Analyst": 1
+   },
+   "years": [
+    19,
+    18.05,
+    17.1
+   ],
+   "conf": 68,
+   "q": "draft",
+   "acc": null,
+   "asm": [
+    {
+     "t": "Source data quality meets the agreed threshold",
+     "tw": "DMS",
+     "s": "unk"
+    },
+    {
+     "t": "Ticket volume stays within ±10% of baseline",
+     "tw": "All",
+     "s": "unk"
+    }
+   ],
+   "aip": [],
+   "com": "Fixed fee",
+   "les": "",
+   "by": "SA team, EU",
+   "date": "2026-10",
+   "framework": 1,
+   "status": "pending",
+   "sample": true,
+   "history": [
+    {
+     "at": "2026-10-01T00:00:00.000Z",
+     "action": "sample deal loaded"
+    }
+   ],
+   "checks": [
+    {
+     "k": "Anonymisation",
+     "ok": true,
+     "t": "No names or locations found.",
+     "block": false
+    },
+    {
+     "k": "Completeness",
+     "ok": true,
+     "t": "All required fields filled.",
+     "block": false
+    },
+    {
+     "k": "Framework version",
+     "ok": true,
+     "t": "Built on the current framework (v2.1).",
+     "block": false
+    },
+    {
+     "k": "Duplicates",
+     "ok": true,
+     "t": "No close match.",
+     "block": false
+    }
+   ]
+  },
+  {
+   "id": "L-0118",
+   "history": [
+    {
+     "at": "2026-11-05T13:25:59.619Z",
+     "action": "submitted"
+    }
+   ],
+   "name": "test prism 1",
+   "ind": "Insurance",
+   "tw": [
+    "AMS",
+    "IMS"
+   ],
+   "apps": 5,
+   "tix": 459,
+   "cov": "24x5",
+   "reg": "EU",
+   "term": 3,
+   "sla": "Standard",
+   "out": "Open",
+   "team": {
+    "System Support Engineer": 18.95,
+    "Infra Support Engineer": 2.58,
+    "AIOps Engineer": 4.76,
+    "Solution Architect": 0.1,
+    "Service Delivery Manager": 2.03
+   },
+   "years": [
+    28.42,
+    25.27,
+    22.84
+   ],
+   "conf": 51,
+   "asm": [
+    {
+     "t": "Service desk (L1) is provided by the client and is out of scope for this team.",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "Service desk (L1) is provided by the client and is out of scope for this team. (from Other)",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: Is this example file the real basis for the deal, or will actual RFP and ticket data be supplied?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: How many P1/critical incidents a month occur across all hours?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: What are the monthly service request and change request volumes, with complexity breakdown, for each tower?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: Is the 400 incidents figure a monthly average, and is it measured at L1, L2 or L3?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: What are the IMS SLA targets (P1/P2 response and restore, availability)?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: What is the AMS application portfolio, including names and size or complexity?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: What is the size and role split of the existing team running these estates today?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "To confirm with the client: Are the weekend and out-of-hours cover requirements contractual, and what P1 response applies outside business hours?",
+     "tw": "All",
+     "s": "unk"
+    },
+    {
+     "t": "IMS tower includes SRE capability, sized at about 0.75 FTE in the example. (from Other)",
+     "tw": "All",
+     "s": "unk"
+    }
+   ],
+   "aip": [
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 3,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 4,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 5,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 2,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 6,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 4,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 1,
+     "plan": 4,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 2,
+     "plan": 8,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 2,
+     "plan": 7,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 3,
+     "plan": 9,
+     "act": null
+    },
+    {
+     "uc": "Other",
+     "from": 3,
+     "plan": 6,
+     "act": null
+    }
+   ],
+   "com": "",
+   "les": "",
+   "by": "Unspecified",
+   "framework": 1,
+   "q": "draft",
+   "acc": null,
+   "status": "pending",
+   "date": "2026-11",
+   "sample": false,
+   "returnNote": "",
+   "checks": [
+    {
+     "k": "Anonymisation",
+     "ok": true,
+     "t": "No names, addresses, numbers or listed terms found."
+    },
+    {
+     "k": "Completeness",
+     "ok": false,
+     "t": "Not filled in: commercial model. The deal is still useful, but matches are weaker without them."
+    },
+    {
+     "k": "Framework version",
+     "ok": true,
+     "t": "Built on the current framework."
+    },
+    {
+     "k": "Duplicates",
+     "ok": true,
+     "t": "No close match."
+    }
+   ]
+  }
+ ]
+}

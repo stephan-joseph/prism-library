@@ -218,3 +218,15 @@ test("an access key fingerprint gates the API without the key being stored", asy
     const ok = await t.call("/api/state", undefined, { "x-access-key": "beta-key-123" }); assert.equal(ok.status, 200); assert.equal(ok.json.beta, true);
   } finally { await t.done(); }
 });
+
+test("a saved export seeds an empty store; a file that is not an export is refused", async () => {
+  const { seedFrom } = await import("../server.mjs");
+  const fs = await import("node:fs"), os = await import("node:os"), path = await import("node:path");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "seed-"));
+  assert.equal(seedFrom(path.join(dir, "none.json")), null);
+  const good = path.join(dir, "good.json");
+  fs.writeFileSync(good, JSON.stringify({ version: 1, seq: 200, catalogue: [], denylist: [], deals: [{ id: "D-1" }] }));
+  assert.equal(seedFrom(good).deals[0].id, "D-1");
+  const bad = path.join(dir, "bad.json"); fs.writeFileSync(bad, JSON.stringify({ hello: 1 }));
+  assert.throws(() => seedFrom(bad), /not a Prism Library export/);
+});

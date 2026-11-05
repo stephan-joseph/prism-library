@@ -7,6 +7,7 @@ import http from "node:http";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import fsSync from "node:fs";
 import { openStore } from "./lib/store.mjs";
 import { createApi } from "./lib/api.mjs";
 import sampleDoc from "./seed/sample.mjs";
@@ -15,8 +16,19 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PUB = path.join(ROOT, "public");
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".json": "application/json", ".svg": "image/svg+xml" };
 
+/* read an export file; null when there is none. A file that exists but is not a library export stops the start, so a bad file is never ignored quietly */
+export function seedFrom(file) {
+  let text;
+  try { text = fsSync.readFileSync(file, "utf8"); } catch (e) { if (e.code === "ENOENT") return null; throw e; }
+  const doc = JSON.parse(text);
+  if (!doc || !Array.isArray(doc.deals) || !Array.isArray(doc.catalogue)) throw new Error(`${file} is not a Prism Library export (needs deals and catalogue).`);
+  return doc;
+}
 export async function start({ dataDir = path.join(ROOT, "data"), port = 8792, curatorKey = "", accessKey = "", accessKeyHash = "", sample = false, host = process.env.HOST || "127.0.0.1" } = {}) {
-  const store = openStore(dataDir, sample ? () => JSON.parse(JSON.stringify(sampleDoc)) : null);
+  /* A saved export at seed/library.json (or LIBRARY_SEED_FILE) starts an empty store and wins over the sample deals */
+  const seedFile = process.env.LIBRARY_SEED_FILE || path.join(ROOT, "seed", "library.json");
+  const seedExport = seedFrom(seedFile);
+  const store = openStore(dataDir, seedExport ? () => JSON.parse(JSON.stringify(seedExport)) : sample ? () => JSON.parse(JSON.stringify(sampleDoc)) : null);
   const api = createApi(store, { curatorKey, accessKey, accessKeyHash });
 
   async function readBody(req) {
@@ -60,6 +72,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const sample = process.argv.includes("--sample") || process.env.LIBRARY_SEED === "sample";
   const dataDir = process.env.DATA_DIR || path.join(ROOT, sample ? "data-demo" : "data");
   const { port } = await start({ dataDir, port: +process.env.PORT || 8792, curatorKey: process.env.LIBRARY_CURATOR_KEY || "", accessKey: process.env.LIBRARY_ACCESS_KEY || "", sample });
-  console.log(`Prism Library on http://localhost:${port}  (${sample ? "sample deals" : "real library"}, data in ${path.relative(ROOT, dataDir) || "."})`);
+  console.log(`Prism Library on http://localhost:${port}  (${process.env.LIBRARY_SEED_FILE || fsSync.existsSync(path.join(ROOT, "seed", "library.json")) ? "saved export" : sample ? "sample deals" : "real library"}, data in ${path.relative(ROOT, dataDir) || "."})`);
   if (!process.env.LIBRARY_ACCESS_KEY && !process.env.LIBRARY_CURATOR_KEY) console.log("No keys set: anyone who can open this page can approve, retire and record actuals.");
 }

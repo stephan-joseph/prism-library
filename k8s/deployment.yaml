@@ -5,6 +5,9 @@ metadata:
   namespace: prism-library
 spec:
   replicas: 1
+  # One replica, and the old pod stops before the new one starts: the data disk has a single writer.
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: prism-library
@@ -19,6 +22,15 @@ spec:
           ports:
             - containerPort: 8792
           env:
-            # Loads the sample deals on start. Data is kept in the pod only (lost on restart) until a volume and DATA_DIR are added.
+            # Loads the sample deals the first time the store is empty. Remove them in Curation, then delete this variable.
             - name: LIBRARY_SEED
               value: sample
+            - name: DATA_DIR
+              value: /data
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: prism-library-data

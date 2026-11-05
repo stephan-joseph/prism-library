@@ -81,6 +81,8 @@ test("completeness and framework checks", () => {
 });
 
 /* ---------- API ---------- */
+/* tests start from an empty store, so they never read the repo's seed/library.json */
+process.env.LIBRARY_SEED_FILE = "/nonexistent/none.json";
 async function boot(opts = {}) {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), "plib-"));
   const app = await start({ dataDir: dir, port: 0, ...opts });

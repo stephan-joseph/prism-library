@@ -57,7 +57,7 @@ export async function start({ dataDir = path.join(ROOT, "data"), port = 8792, cu
 
 /* run directly */
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const sample = process.argv.includes("--sample");
+  const sample = process.argv.includes("--sample") || process.env.LIBRARY_SEED === "sample";
   const dataDir = process.env.DATA_DIR || path.join(ROOT, sample ? "data-demo" : "data");
   const { port } = await start({ dataDir, port: +process.env.PORT || 8792, curatorKey: process.env.LIBRARY_CURATOR_KEY || "", accessKey: process.env.LIBRARY_ACCESS_KEY || "", sample });
   console.log(`Prism Library on http://localhost:${port}  (${sample ? "sample deals" : "real library"}, data in ${path.relative(ROOT, dataDir) || "."})`);

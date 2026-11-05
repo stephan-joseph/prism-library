@@ -17,4 +17,8 @@ spec:
         - name: prism-library
           image: stejose/prism-library:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8792
+          env:
+            # Loads the sample deals on start. Data is kept in the pod only (lost on restart) until a volume and DATA_DIR are added.
+            - name: LIBRARY_SEED
+              value: sample

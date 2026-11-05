@@ -15,7 +15,7 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PUB = path.join(ROOT, "public");
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".json": "application/json", ".svg": "image/svg+xml" };
 
-export async function start({ dataDir = path.join(ROOT, "data"), port = 8792, curatorKey = "", accessKey = "", accessKeyHash = "", sample = false, host = "127.0.0.1" } = {}) {
+export async function start({ dataDir = path.join(ROOT, "data"), port = 8792, curatorKey = "", accessKey = "", accessKeyHash = "", sample = false, host = process.env.HOST || "127.0.0.1" } = {}) {
   const store = openStore(dataDir, sample ? () => JSON.parse(JSON.stringify(sampleDoc)) : null);
   const api = createApi(store, { curatorKey, accessKey, accessKeyHash });
 

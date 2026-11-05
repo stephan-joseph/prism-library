@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prism-library
+  namespace: prism-library
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prism-library
+  template:
+    metadata:
+      labels:
+        app: prism-library
+    spec:
+      containers:
+        - name: prism-library
+          image: stejose/prism-library:latest
+          ports:
+            - containerPort: 80

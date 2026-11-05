@@ -5,9 +5,6 @@ metadata:
   namespace: prism-library
 spec:
   replicas: 1
-  # One replica, and the old pod stops before the new one starts: the data disk has a single writer.
-  strategy:
-    type: Recreate
   selector:
     matchLabels:
       app: prism-library
@@ -31,6 +28,7 @@ spec:
             - name: data
               mountPath: /data
       volumes:
+        # emptyDir: kept across container restarts, lost when the pod is replaced (every redeploy).
+        # Needs no storage driver. Swap for a PersistentVolumeClaim once the cluster has the EBS CSI driver.
         - name: data
-          persistentVolumeClaim:
-            claimName: prism-library-data
+          emptyDir: {}

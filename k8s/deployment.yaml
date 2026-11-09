@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prism-library-data
+  namespace: prism-library
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: gp2
+  resources:
+    requests:
+      storage: 5Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,6 +18,8 @@ metadata:
   namespace: prism-library
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: prism-library
@@ -19,7 +34,8 @@ spec:
           ports:
             - containerPort: 8792
           env:
-            # Loads the sample deals the first time the store is empty. Remove them in Curation, then delete this variable.
+	    - name: LIBRARY_URL
+              value: http://prism-library.prism-library.svc.cluster.local
             - name: LIBRARY_SEED
               value: sample
             - name: DATA_DIR
@@ -28,7 +44,6 @@ spec:
             - name: data
               mountPath: /data
       volumes:
-        # emptyDir: kept across container restarts, lost when the pod is replaced (every redeploy).
-        # Needs no storage driver. Swap for a PersistentVolumeClaim once the cluster has the EBS CSI driver.
         - name: data
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: prism-library-data
